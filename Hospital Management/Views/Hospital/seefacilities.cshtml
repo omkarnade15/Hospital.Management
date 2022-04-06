@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Hospital_Management.Models.HospitalFaciltyMapping>
+
+@{
+    ViewBag.Title = "seefacilities";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>seefacilities</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Doctor.Doctor_ID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital.Hospital_name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.HospitalAdmin.Hadmin_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Facility_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Doctor.Doctor_ID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital.Hospital_name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.HospitalAdmin.Hadmin_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td*@>
+        <td>
+            @Html.DisplayFor(modelItem => item.Facility_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_name)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Facility_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Facility_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Facility_ID })
+        </td>*@
+    </tr>
+}
+
+</table>

@@ -1,0 +1,69 @@
+﻿@model Hospital_Management.Models.Patient
+
+@{
+    ViewBag.Title = "PatientLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Patient Login</h2>
+<br />
+<br />
+@if (ViewBag.ErrorMessage != null)
+{
+    <b class="text-danger">
+        @ViewBag.ErrorMessage
+    </b>
+}
+<br />
+<center>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text - danger" })
+    @Html.AntiForgeryToken()
+
+    <table class="table table-striped">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Username)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Username)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(model => model.Username, null,
+             new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Password)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Password)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(model => model.Password, null,
+             new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button type="submit" name="btnSubmit">Login</button>
+            </td>
+        </tr>
+
+    </table>
+}
+
+</center>

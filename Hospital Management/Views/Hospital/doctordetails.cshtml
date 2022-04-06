@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Hospital_Management.Models.Doctor>
+
+@{
+    ViewBag.Title = "doctordetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>doctordetails</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor_ID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </th>
+
+
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor_ID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Hospital_name)
+            </td>
+
+
+            <td>
+
+                @Html.ActionLink("Details of Doctor", "seedoctors", new { id = item.Username }) |
+
+            </td>
+        </tr>
+    }
+
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center>
+    <div>
+        @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

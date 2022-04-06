@@ -1,0 +1,70 @@
+﻿@model Hospital_Management.Models.HospitalFaciltyMapping
+
+@{
+    ViewBag.Title = "AddFacilities";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+
+    <h2 class="text-info">Add Facilities</h2>
+    <h4 class="text-success">Please select your hospital add facilities one by one to it.</h4>
+    @ViewBag.Message
+
+
+
+
+
+    <table cellspacing="40" class="dataTable table table-hover table-striped table-bordered danger">
+        <tr>
+            <td>
+                @Html.DropDownListFor(model => model.Hospital_name, ViewBag.hospitallist as SelectList, "Select Hospital")
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DropDownListFor(model => model.Facility_name, new SelectList(ViewBag.list), "Select facility")
+
+            </td>
+        </tr>
+        <
+    </table>
+
+
+    <center>
+        <div>
+            @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+        </div>
+    </center>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add Facility" class="" btn btn-warning"t" />
+        </div>
+    </div>
+}
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+﻿@model Hospital_Management.Models.Patient
+
+@{
+    ViewBag.Title = "patient_after_login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>patient_after_login</h2>
+<table cellspacing="40" class="dataTable table table-hover table-striped table-bordered danger">
+
+    <tr class="success">
+
+        <td>@Html.ActionLink("Seee Hospitals", "hospitals_available")</td>
+
+    </tr>
+    <tr>
+
+        <td>@Html.ActionLink("Book Appoinment for Doctor ", "appoinmentbooking")</td>
+
+    </tr>
+    <tr class="success">
+
+        <td>@Html.ActionLink("Book Appoinment for Facility", "facilitybooking")</td>
+
+    </tr>
+    <tr>
+
+        <td>@Html.ActionLink("View Appoinments  for facility", "viewappoinment_patient_facility")</td>
+
+    </tr>
+    <tr class="success">
+
+        <td>@Html.ActionLink("View Appoinments  for Doctor", "viewappoinment_patient_doctor")</td>
+
+    </tr>
+   
+    <tr>
+
+        <td>@Html.ActionLink("View Test Results", "view_testresult_patient", "Doctor")</td>
+
+    </tr>
+    <tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center>
+    <div>
+        @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

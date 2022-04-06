@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "doctor_after_login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Doctor Log in</h2>
+
+<div>
+    @Html.ActionLink("See Appoinments", "Details")
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div>
+    @Html.ActionLink("View and edit test results", "View_test_result")
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div>
+    @Html.ActionLink("Add Patient Recors", "add_records")
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center>
+    <div>
+        @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

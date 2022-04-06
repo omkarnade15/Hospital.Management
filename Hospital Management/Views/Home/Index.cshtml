@@ -1,0 +1,39 @@
+﻿@{
+
+    ViewBag.Title = "Index";
+
+}
+<div class="jumbotron">
+<h2 class=".text-danger">Welcome To Hospital Management System</h2>
+
+<h2 class=".text-success">Registration Page</h2>
+<h3 class=".text-warning">If you are new user please register.</h3>
+<h3 class=".text-warning">If already registered go to log in page.</h3>
+    </div>
+
+
+<table cellspacing="20" class="dataTable table table-hover table-striped table-bordered danger">
+
+    <tr class="danger">
+
+        <td>@Html.ActionLink("Patient Registration", "Patient_Registration")</td>
+
+    </tr>
+    <tr class="danger">
+
+        <td>@Html.ActionLink("Doctor Registration", "Doctor_Registration")</td>
+
+    </tr>
+    <tr class="danger">
+
+        <td>@Html.ActionLink("Hospital Admin Registration", "Hospitaladmin_hospital", "Hospital")</td>
+
+    </tr>
+    <tr class="danger">
+
+        <td>@Html.ActionLink("Log in Page", "HospitalHome")</td>
+
+    </tr>
+
+
+</table>

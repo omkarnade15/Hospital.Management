@@ -1,0 +1,99 @@
+﻿@model Hospital_Management.Models.Doctor
+
+@{
+    ViewBag.Title = "seedoctors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>seedoctors</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor_ID)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailID)
+        </dd>
+
+
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speciality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speciality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_name)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day_available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day_available)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_available)
+        </dd>
+
+    </dl>
+</div>
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Username }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center>
+    <div>
+        @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

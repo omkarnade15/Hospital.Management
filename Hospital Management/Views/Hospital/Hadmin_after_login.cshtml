@@ -1,0 +1,123 @@
+﻿@model Hospital_Management.ViewModels.HospitalViewmodel
+
+@{
+    ViewBag.Title = "Hadmin_after_login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome Hospital Admin</h2>
+<div class="form-group">
+    @*@Html.LabelFor(model => model.Hospital_ID, htmlAttributes: new { @class = "control-label col-md-2" })*@
+    <div class="col-md-10">
+        <h3 class="text-success"> Hospital ID: @ViewBag.adminID</h3>
+
+    </div>
+</div>
+<div class="form-group">
+
+    @*@Html.LabelFor(model => model.Hospital_name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+    <div class="col-md-10">
+
+        <h3 class="text-success"> Hospital Name:@ViewBag.adminname</h3>
+
+    </div>
+</div>
+
+@*<div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>*@
+
+
+
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+
+<table cellspacing="40" class="dataTable table table-hover table-striped table-bordered danger">
+
+    <tr>
+
+        <td>@Html.ActionLink("Add Facilities", "AddFacilities", "Hospital")</td>
+
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr class="danger">
+
+        <td>@Html.ActionLink("See appoinments", "appoinmentdetails", "Hospital")</td>
+
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr class="success">
+
+        <td>  @Html.ActionLink("Update Test Results", "updateappoinment", "Hospital")</td>
+
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr class="primary">
+
+        <td >  @Html.ActionLink("Add Patient Records", "add_records", "Hospital")</td>
+
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr>
+        <td></td>>
+    </tr>
+    <tr class="bg-warning">
+
+        <td> @Html.ActionLink("Generate Bill", "billing", "Hospital")</td>
+
+    </tr>
+
+</table>
+
+
+@*<div class="bg-info text-danger">
+        @Html.ActionLink("Add Facilities", "AddFacilities", "Hospital")
+    </div>
+
+    <div class="bg-success text-info">
+        @Html.ActionLink("See appoinments", "appoinmentdetails", "Hospital")
+    </div>
+
+
+    <div class="bg-danger text-info">
+        @Html.ActionLink("Update Test Results", "updateappoinment", "Hospital")
+    </div>
+
+    <div class="bg-info text-danger">
+        @Html.ActionLink("Add Patient Records", "add_records", "Hospital")
+    </div>
+
+    <div class="bg-success text-info">
+        @Html.ActionLink("Generate Bill", "billing", "Hospital")
+    </div>*@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center>
+    <div>
+        @Html.ActionLink("Log Out", "Logout", "Home", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

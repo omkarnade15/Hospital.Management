@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "HospitalHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="bg-success">Hospital Home</h2>
+<br />
+
+    <center>
+        @if (ViewBag.Message != null)
+        {
+            <b class="text text-danger">
+                @ViewBag.Message
+            </b>
+        }
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            <table class="table table-striped">
+                <tr>
+                    <td>
+                        <b class="text-danger">Choose User Type:</b>
+                    </td>
+                    <td>
+                        @Html.DropDownList("UserRole", new List<SelectListItem>
+                        {
+                            new SelectListItem{Text="Patient",Value="Patient"},
+                            new SelectListItem{Text="Doctor",Value="Doctor"},
+                            new SelectListItem{Text="Hospital Admin",Value="Hospital Admin"}
+                        }, "Select Role...")
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" name="btnSubmit" class="btn-warning text-danger">Select</button>
+                    </td>
+                </tr>
+            </table>
+        }
+    </center>
+    
+
+
+

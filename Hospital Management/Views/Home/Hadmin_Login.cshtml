@@ -1,0 +1,70 @@
+﻿@model Hospital_Management.Models.HospitalAdmin
+
+@{
+    ViewBag.Title = "Hadmin_Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-success">Hospital Admin Login</h2>
+<br />
+<br />
+@if (ViewBag.ErrorMessage != null)
+{
+    <b class="text-danger">
+        @ViewBag.ErrorMessage
+    </b>
+}
+<br />
+<center>
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text - danger" })
+        @Html.AntiForgeryToken()
+
+        <table class="table table-striped  ">/
+            <tr>
+                <td class="text-danger ">
+                    @Html.DisplayNameFor(model => model.Username)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Username)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.Username, null,
+                 new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="text-primary ">
+                    @Html.DisplayNameFor(model => model.Password)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Password)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.Password, null,
+                 new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button type="submit" name="btnSubmit">Login</button>
+                </td>
+            </tr>
+
+        </table>
+    }
+
+</center>
+

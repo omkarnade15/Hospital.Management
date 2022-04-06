@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Hospital_Management.Models.Hospital>
+
+@{
+    ViewBag.Title = "hospitals_available";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hospitals Available</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Doctor.Doctor_ID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Doctor.Doctor_ID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_name)
+        </td>
+        <td>
+            @Html.ActionLink("See Facilities", "seefacilities", new { id=item.Hospital_name }) |
+            @Html.ActionLink("Details", "hospitaldetails", new { id=item.Hospital_name }) |
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.Hospital_ID })*@
+        </td>
+    </tr>
+}
+
+</table>
