@@ -15,3 +15,6 @@
 *Entity Framework
 *Sql Sever
 *C#
+*HTML
+*CSS
+
